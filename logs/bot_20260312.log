@@ -1,0 +1,52 @@
+2026-03-12 17:40:49,652 - __main__ - INFO - Кеш инициализирован с TTL=300 сек
+2026-03-12 17:40:49,670 - __main__ - INFO - Загружено 1 записей из teachers.json
+2026-03-12 17:40:49,683 - __main__ - INFO - Загружено 25 записей из heads.json
+2026-03-12 17:40:49,691 - __main__ - INFO - Загружено 4 записей из admins.json
+2026-03-12 17:40:49,701 - __main__ - INFO - Загружено 9 записей из paps.json
+2026-03-12 17:40:49,702 - __main__ - INFO - Загружено 30 записей из links.json
+2026-03-12 17:40:49,703 - __main__ - ERROR - Файл data/subjects.json не найден
+2026-03-12 17:40:49,704 - __main__ - INFO - ✅ Бот запущен!
+2026-03-12 17:40:49,704 - __main__ - INFO - 👑 Администратор: @kuch_kary (ID: 2087846204)
+2026-03-12 17:40:49,705 - __main__ - INFO - 📱 Режим: без регистрации
+2026-03-12 17:40:49,705 - __main__ - INFO - 🤖 Жду сообщения от пользователей...
+2026-03-12 17:40:49,705 - aiogram.dispatcher - INFO - Start polling
+2026-03-12 17:40:51,824 - aiogram.dispatcher - INFO - Run polling for bot @hseinfohelperbot id=8710160874 - 'HSE INFO HELPER'
+2026-03-12 17:45:09,782 - __main__ - INFO - Кеш инициализирован с TTL=300 сек
+2026-03-12 17:45:09,790 - __main__ - INFO - Загружено 1 записей из teachers.json
+2026-03-12 17:45:09,791 - __main__ - INFO - Загружено 25 записей из heads.json
+2026-03-12 17:45:09,792 - __main__ - INFO - Загружено 4 записей из admins.json
+2026-03-12 17:45:09,793 - __main__ - INFO - Загружено 9 записей из paps.json
+2026-03-12 17:45:09,794 - __main__ - INFO - Загружено 30 записей из links.json
+2026-03-12 17:45:09,795 - __main__ - INFO - ✅ Бот запущен!
+2026-03-12 17:45:09,795 - __main__ - INFO - 👑 Администратор: @kuch_kary (ID: 2087846204)
+2026-03-12 17:45:09,795 - __main__ - INFO - 📱 Режим: без регистрации
+2026-03-12 17:45:09,796 - __main__ - INFO - 🤖 Жду сообщения от пользователей...
+2026-03-12 17:45:09,796 - aiogram.dispatcher - INFO - Start polling
+2026-03-12 17:45:11,787 - aiogram.dispatcher - INFO - Run polling for bot @hseinfohelperbot id=8710160874 - 'HSE INFO HELPER'
+2026-03-12 17:45:28,698 - aiogram.event - INFO - Update id=63999993 is handled. Duration 1545 ms by bot id=8710160874
+2026-03-12 17:45:38,788 - aiogram.event - INFO - Update id=63999994 is handled. Duration 478 ms by bot id=8710160874
+2026-03-12 17:45:41,078 - aiogram.event - INFO - Update id=63999995 is handled. Duration 101 ms by bot id=8710160874
+2026-03-12 17:45:48,170 - aiogram.event - INFO - Update id=63999996 is handled. Duration 501 ms by bot id=8710160874
+2026-03-12 17:46:02,832 - aiogram.event - INFO - Update id=63999997 is handled. Duration 1598 ms by bot id=8710160874
+2026-03-12 17:46:14,536 - aiogram.event - INFO - Update id=63999998 is handled. Duration 190 ms by bot id=8710160874
+2026-03-12 17:46:28,339 - aiogram.event - INFO - Update id=63999999 is handled. Duration 427 ms by bot id=8710160874
+2026-03-12 17:46:40,113 - aiogram.event - INFO - Update id=64000000 is handled. Duration 3039 ms by bot id=8710160874
+2026-03-12 17:46:43,880 - aiogram.event - INFO - Update id=64000001 is handled. Duration 409 ms by bot id=8710160874
+2026-03-12 17:46:50,964 - __main__ - INFO - Загружено 30 записей из links.json
+2026-03-12 17:46:53,360 - aiogram.event - INFO - Update id=64000002 is handled. Duration 2402 ms by bot id=8710160874
+2026-03-12 17:46:55,150 - aiogram.event - INFO - Update id=64000003 is handled. Duration 411 ms by bot id=8710160874
+2026-03-12 17:47:02,668 - aiogram.event - INFO - Update id=64000004 is handled. Duration 1765 ms by bot id=8710160874
+2026-03-12 17:47:06,690 - aiogram.event - INFO - Update id=64000005 is handled. Duration 771 ms by bot id=8710160874
+2026-03-12 17:47:19,890 - aiogram.event - INFO - Update id=64000006 is handled. Duration 1586 ms by bot id=8710160874
+2026-03-12 17:47:22,680 - aiogram.event - INFO - Update id=64000007 is handled. Duration 485 ms by bot id=8710160874
+2026-03-12 17:47:31,857 - aiogram.event - INFO - Update id=64000008 is handled. Duration 474 ms by bot id=8710160874
+2026-03-12 17:47:36,833 - aiogram.event - INFO - Update id=64000009 is handled. Duration 658 ms by bot id=8710160874
+2026-03-12 17:47:40,117 - __main__ - INFO - Загружено 1 записей из teachers.json
+2026-03-12 17:47:42,390 - aiogram.event - INFO - Update id=64000010 is handled. Duration 2274 ms by bot id=8710160874
+2026-03-12 17:47:47,537 - __main__ - INFO - Загружено 4 записей из admins.json
+2026-03-12 17:47:48,622 - aiogram.event - INFO - Update id=64000011 is handled. Duration 1087 ms by bot id=8710160874
+2026-03-12 17:47:52,952 - __main__ - INFO - Загружено 25 записей из heads.json
+2026-03-12 17:47:59,894 - aiogram.event - INFO - Update id=64000012 is handled. Duration 6944 ms by bot id=8710160874
+2026-03-12 17:48:07,232 - __main__ - INFO - Загружено 9 записей из paps.json
+2026-03-12 17:48:08,166 - aiogram.event - INFO - Update id=64000013 is handled. Duration 938 ms by bot id=8710160874
+2026-03-12 17:48:26,199 - aiogram.event - INFO - Update id=64000014 is handled. Duration 5983 ms by bot id=8710160874

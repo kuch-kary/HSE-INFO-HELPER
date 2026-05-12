@@ -1,0 +1,240 @@
+[
+    {
+        "id": 1,
+        "title": "LMS",
+        "description": "Электронная зачетка, выбор майноров, СОП",
+        "url": "https://lms.hse.ru/",
+        "category": "lms"
+    },
+    {
+        "id": 2,
+        "title": "Smart LMS",
+        "description": "Учебные курсы, материалы к занятиям, сдача экзаменов",
+        "url": "https://edu.hse.ru/my/courses.php",
+        "category": "lms"
+    },
+    {
+        "id": 3,
+        "title": "Расписание (TimeTracker)",
+        "description": "Основное расписание занятий",
+        "url": "https://timetracker.hse.ru/Login.aspx?ReturnUrl=%2f",
+        "category": "schedule"
+    },
+    {
+        "id": 4,
+        "title": "Расписание (мобильная версия)",
+        "description": "TimeTracker для телефона",
+        "url": "https://timetracker.hse.ru/app/",
+        "category": "schedule"
+    },
+    {
+        "id": 5,
+        "title": "HSE App X (iOS)",
+        "description": "Приложение для iPhone",
+        "url": "https://apps.apple.com/ru/app/hse-app-x/id1527320487",
+        "category": "schedule"
+    },
+    {
+        "id": 6,
+        "title": "HSE App (Android)",
+        "description": "Приложение для Android",
+        "url": "https://play.google.com/store/apps/details?id=com.hse.app2&hl=ru&gl=US",
+        "category": "schedule"
+    },
+    {
+        "id": 7,
+        "title": "График учебного процесса",
+        "description": "Календарный график на учебный год",
+        "url": "https://www.hse.ru/pubs/share/direct/1089565533.png:r1118x745.jpg",
+        "category": "schedule"
+    },
+    {
+        "id": 8,
+        "title": "РУП",
+        "description": "Рабочий учебный план - расписание предметов по семестрам",
+        "url": "https://rup.hse.ru",
+        "category": "docs"
+    },
+    {
+        "id": 9,
+        "title": "Справочник студента",
+        "description": "Официальный справочник учебного процесса",
+        "url": "https://www.hse.ru/studyspravka/",
+        "category": "docs"
+    },
+    {
+        "id": 10,
+        "title": "Портфолио (старая версия)",
+        "description": "Система портфолио portfolio.hse.ru",
+        "url": "https://portfolio.hse.ru/",
+        "category": "portfolio"
+    },
+    {
+        "id": 11,
+        "title": "Новое портфолио",
+        "description": "Платформа hsedesign.com",
+        "url": "https://hsedesign.com/",
+        "category": "portfolio"
+    },
+    {
+        "id": 12,
+        "title": "SmartPoint",
+        "description": "Личный кабинет студента",
+        "url": "https://lk.hse.ru/profile",
+        "category": "services"
+    },
+    {
+        "id": 13,
+        "title": "SmartPRO",
+        "description": "Система прокторинга для экзаменов",
+        "url": "https://smartpro.hse.ru/",
+        "category": "services"
+    },
+    {
+        "id": 14,
+        "title": "SmartWay",
+        "description": "Выбор майноров и курсов по выбору",
+        "url": "https://courseselect.hse.ru/",
+        "category": "services"
+    },
+    {
+        "id": 15,
+        "title": "Антиплагиат",
+        "description": "Проверка работ на заимствования",
+        "url": "https://bpm.hse.ru/Runtime/Runtime/Form.aspx?_Name=AP_f_Request",
+        "category": "services"
+    },
+    {
+        "id": 16,
+        "title": "HelpCenter",
+        "description": "Поддержка и помощь",
+        "url": "https://pmo.hse.ru/servicedesk/customer/portals",
+        "category": "services"
+    },
+    {
+        "id": 17,
+        "title": "Библиотека ВШЭ",
+        "description": "Электронные ресурсы библиотеки",
+        "url": "https://library.hse.ru/e-resources",
+        "category": "services"
+    },
+    {
+        "id": 18,
+        "title": "Выставочное портфолио",
+        "description": "Платформа Deziiign",
+        "url": "https://deziiign.com/tag/56a474abc8e1448d96a536a9c584141f",
+        "category": "portfolio"
+    },
+    {
+        "id": 19,
+        "title": "Персональное расписание (дизайн)",
+        "description": "Расписание и посещаемость",
+        "url": "https://design.hse.ru/edu/schedule",
+        "category": "schedule"
+    },
+    {
+        "id": 20,
+        "title": "Информация для студентов (дизайн)",
+        "description": "Ресурсы Школы Дизайна",
+        "url": "https://design.hse.ru/info/students",
+        "category": "docs"
+    },
+    {
+        "id": 21,
+        "title": "ОП «Дизайн»",
+        "description": "Образовательная программа в Перми",
+        "url": "https://perm.hse.ru/ba/design/",
+        "category": "docs"
+    },
+    {
+        "id": 22,
+        "title": "Документы ОП Дизайн",
+        "description": "Нормативные документы",
+        "url": "https://perm.hse.ru/ba/design/documents",
+        "category": "docs"
+    },
+    {
+        "id": 23,
+        "title": "Страница программы онлайн",
+        "description": "Онлайн-страница программы",
+        "url": "https://design.hse.ru/online/ba",
+        "category": "docs"
+    },
+    {
+        "id": 24,
+        "title": "Карта креативных компетенций",
+        "description": "Расписание и мероприятия",
+        "url": "https://creativemap.hse.ru/",
+        "category": "services"
+    },
+    {
+        "id": 25,
+        "title": "Почемучник",
+        "description": "Справочник для студентов",
+        "url": "https://pochemuchnik.hse.ru/",
+        "category": "docs"
+    },
+    {
+        "id": 26,
+        "title": "Программное обеспечение",
+        "description": "Полезные программы для студентов",
+        "url": "https://t.me/c/2204105739/2873",
+        "category": "services"
+    },
+    {
+        "id": 27,
+        "title": "Отзывы на преподавателей (старая версия)",
+        "description": "Таблица с отзывами",
+        "url": "https://docs.google.com/spreadsheets/d/12EKnT9Ug2wPoXU8dz3fCZc4DTp8zbJeiYn5E9VYX3sQ/edit?gid=953568167#gid=953568167",
+        "category": "reviews"
+    },
+    {
+        "id": 28,
+        "title": "Отзывы на преподавателей (новая версия)",
+        "description": "Обновленная таблица с отзывами",
+        "url": "https://docs.google.com/spreadsheets/d/1SoF6Cgf4dCpYjle1nRXeXArr3c2uRBLpu7knwztAg8M/edit?usp=sharing",
+        "category": "reviews"
+    },
+    {
+        "id": 29,
+        "title": "Памятка по этике",
+        "description": "Документ с правилами этики",
+        "url": "https://docs.google.com/document/d/14Wlf548EQZ84egN_PJGXFeECVYMkqIBtoxLlos0vwX0/edit",
+        "category": "docs"
+    },
+    {
+        "id": 30,
+        "title": "Telegram канал Пермской Вышки",
+        "description": "Официальный канал",
+        "url": "https://t.me/hse_perm",
+        "category": "chats"
+    },
+    {
+        "id": 31,
+        "title": "Чат факультета дизайна",
+        "description": "Общий чат для студентов дизайна",
+        "url": "https://t.me/design_hse_perm",
+        "category": "chats"
+    },
+    {
+        "id": 32,
+        "title": "Доска объявлений",
+        "description": "Telegram-канал с объявлениями",
+        "url": "https://t.me/+Qj_rWFxSck9iYTUy",
+        "category": "chats"
+    },
+    {
+        "id": 33,
+        "title": "Поддержка HSEDESIGN.RU",
+        "description": "Чат поддержки",
+        "url": "https://t.me/+O5bv0fqTbJJkYWEy",
+        "category": "chats"
+    },
+    {
+        "id": 34,
+        "title": "HSE CHANCE",
+        "description": "Вакансии, стажировки, конкурсы",
+        "url": "https://t.me/artdesignjob",
+        "category": "chats"
+    }
+]

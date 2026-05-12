@@ -1,0 +1,188 @@
+2026-03-11 19:28:09,583 - __main__ - INFO - Кеш инициализирован с TTL=300 сек
+2026-03-11 19:28:09,589 - __main__ - INFO - Загружено 1 записей из teachers.json
+2026-03-11 19:28:09,589 - __main__ - INFO - Загружено 1 записей из heads.json
+2026-03-11 19:28:09,590 - __main__ - INFO - Загружено 1 записей из admins.json
+2026-03-11 19:28:09,591 - __main__ - INFO - Загружено 1 записей из paps.json
+2026-03-11 19:28:09,591 - __main__ - INFO - Загружено 1 записей из links.json
+2026-03-11 19:28:09,592 - __main__ - INFO - Загружено 1 записей из subjects.json
+2026-03-11 19:28:09,593 - __main__ - INFO - ✅ Бот запущен!
+2026-03-11 19:28:09,594 - __main__ - INFO - 👑 Администратор: @kuch_kary (ID: 2087846204)
+2026-03-11 19:28:09,594 - __main__ - INFO - 📱 Разделы: Контакты, Учебные материалы, Поиск, Инструкция
+2026-03-11 19:28:09,595 - __main__ - INFO - 🤖 Жду сообщения от пользователей...
+2026-03-11 19:28:09,595 - aiogram.dispatcher - INFO - Start polling
+2026-03-11 19:28:09,992 - aiogram.dispatcher - INFO - Run polling for bot @hseinfohelperbot id=8710160874 - 'HSE INFO HELPER'
+2026-03-11 19:28:10,939 - aiogram.event - INFO - Update id=63999905 is handled. Duration 456 ms by bot id=8710160874
+2026-03-11 19:28:10,955 - aiogram.event - INFO - Update id=63999906 is handled. Duration 472 ms by bot id=8710160874
+2026-03-11 19:28:33,169 - aiogram.event - INFO - Update id=63999907 is handled. Duration 198 ms by bot id=8710160874
+2026-03-11 19:29:09,450 - __main__ - INFO - Загружено 1 записей из teachers.json
+2026-03-11 19:29:09,541 - aiogram.event - INFO - Update id=63999908 is handled. Duration 99 ms by bot id=8710160874
+2026-03-11 19:29:46,264 - __main__ - INFO - Загружено 1 записей из heads.json
+2026-03-11 19:29:46,674 - aiogram.event - INFO - Update id=63999909 is handled. Duration 418 ms by bot id=8710160874
+2026-03-11 19:30:20,033 - __main__ - INFO - Загружено 1 записей из admins.json
+2026-03-11 19:30:20,167 - aiogram.event - INFO - Update id=63999910 is handled. Duration 143 ms by bot id=8710160874
+2026-03-11 19:30:25,825 - __main__ - INFO - Загружено 1 записей из paps.json
+2026-03-11 19:30:25,924 - aiogram.event - INFO - Update id=63999911 is handled. Duration 108 ms by bot id=8710160874
+2026-03-11 19:30:31,692 - aiogram.event - INFO - Update id=63999912 is handled. Duration 1020 ms by bot id=8710160874
+2026-03-11 19:30:35,748 - aiogram.event - INFO - Update id=63999913 is handled. Duration 230 ms by bot id=8710160874
+2026-03-11 19:30:38,329 - __main__ - ERROR - Ошибка в registration_start: 'State' object has no attribute 'set'
+Traceback (most recent call last):
+  File "E:\ai\py\bot_tg\bot.py", line 260, in wrapper
+    return await func(message, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ai\py\bot_tg\bot.py", line 581, in registration_start
+    await RegistrationStates.waiting_for_faculty.set()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'State' object has no attribute 'set'
+2026-03-11 19:30:38,432 - aiogram.event - INFO - Update id=63999914 is handled. Duration 194 ms by bot id=8710160874
+2026-03-11 19:31:18,875 - aiogram.event - INFO - Update id=63999915 is handled. Duration 205 ms by bot id=8710160874
+2026-03-11 19:31:23,001 - aiogram.event - INFO - Update id=63999916 is handled. Duration 174 ms by bot id=8710160874
+2026-03-11 19:31:27,244 - aiogram.event - INFO - Update id=63999917 is handled. Duration 2107 ms by bot id=8710160874
+2026-03-11 19:31:30,142 - aiogram.event - INFO - Update id=63999918 is handled. Duration 100 ms by bot id=8710160874
+2026-03-11 19:31:38,392 - __main__ - INFO - Загружено 1 записей из links.json
+2026-03-11 19:31:38,488 - aiogram.event - INFO - Update id=63999919 is handled. Duration 104 ms by bot id=8710160874
+2026-03-11 19:31:39,863 - aiogram.event - INFO - Update id=63999920 is handled. Duration 1094 ms by bot id=8710160874
+2026-03-11 19:31:40,630 - aiogram.event - INFO - Update id=63999921 is handled. Duration 100 ms by bot id=8710160874
+2026-03-11 19:32:05,784 - aiogram.event - INFO - Update id=63999922 is handled. Duration 225 ms by bot id=8710160874
+2026-03-11 19:32:07,827 - aiogram.event - INFO - Update id=63999923 is handled. Duration 407 ms by bot id=8710160874
+2026-03-11 19:32:10,004 - aiogram.event - INFO - Update id=63999924 is handled. Duration 128 ms by bot id=8710160874
+2026-03-11 19:32:14,149 - aiogram.event - INFO - Update id=63999925 is handled. Duration 118 ms by bot id=8710160874
+2026-03-11 19:32:16,538 - __main__ - INFO - Загружено 1 записей из subjects.json
+2026-03-11 19:32:16,629 - aiogram.event - INFO - Update id=63999926 is handled. Duration 97 ms by bot id=8710160874
+2026-03-11 19:32:22,722 - aiogram.event - INFO - Update id=63999927 is handled. Duration 462 ms by bot id=8710160874
+2026-03-11 19:32:24,580 - aiogram.event - INFO - Update id=63999928 is handled. Duration 115 ms by bot id=8710160874
+2026-03-11 19:32:49,220 - aiogram.event - INFO - Update id=63999929 is handled. Duration 242 ms by bot id=8710160874
+2026-03-11 19:32:52,623 - aiogram.event - INFO - Update id=63999930 is handled. Duration 249 ms by bot id=8710160874
+2026-03-11 19:33:37,975 - aiogram.event - INFO - Update id=63999931 is handled. Duration 910 ms by bot id=8710160874
+2026-03-11 19:33:43,332 - aiogram.event - INFO - Update id=63999932 is handled. Duration 528 ms by bot id=8710160874
+2026-03-11 19:33:53,712 - aiogram.event - INFO - Update id=63999933 is handled. Duration 1562 ms by bot id=8710160874
+2026-03-11 19:34:16,314 - aiogram.event - INFO - Update id=63999934 is handled. Duration 717 ms by bot id=8710160874
+2026-03-11 19:34:40,158 - aiogram.event - INFO - Update id=63999935 is handled. Duration 105 ms by bot id=8710160874
+2026-03-11 19:35:09,930 - __main__ - INFO - Поиск от Kuch_kary: 'у какой группы ведет Будникова?', группы: []
+2026-03-11 19:35:09,933 - __main__ - INFO - Загружено 1 записей из teachers.json
+2026-03-11 19:35:09,934 - __main__ - INFO - Поиск от @Kuch_kary: 'у какой группы ведет Будникова?' -> not_found
+2026-03-11 19:35:11,392 - aiogram.event - INFO - Update id=63999936 is handled. Duration 1601 ms by bot id=8710160874
+2026-03-11 19:40:55,011 - aiogram.event - INFO - Update id=63999937 is handled. Duration 328 ms by bot id=8710160874
+2026-03-11 19:40:55,316 - aiogram.event - INFO - Update id=63999938 is handled. Duration 632 ms by bot id=8710160874
+2026-03-11 19:44:29,486 - __main__ - INFO - Кеш инициализирован с TTL=300 сек
+2026-03-11 19:44:29,491 - __main__ - INFO - Загружено 1 записей из teachers.json
+2026-03-11 19:44:29,492 - __main__ - INFO - Загружено 1 записей из heads.json
+2026-03-11 19:44:29,492 - __main__ - INFO - Загружено 1 записей из admins.json
+2026-03-11 19:44:29,493 - __main__ - INFO - Загружено 1 записей из paps.json
+2026-03-11 19:44:29,493 - __main__ - INFO - Загружено 1 записей из links.json
+2026-03-11 19:44:29,494 - __main__ - INFO - Загружено 1 записей из subjects.json
+2026-03-11 19:44:29,495 - __main__ - INFO - ✅ Бот запущен!
+2026-03-11 19:44:29,495 - __main__ - INFO - 👑 Администратор: @kuch_kary (ID: 2087846204)
+2026-03-11 19:44:29,495 - __main__ - INFO - 📱 Режим: без регистрации
+2026-03-11 19:44:29,495 - __main__ - INFO - 🤖 Жду сообщения от пользователей...
+2026-03-11 19:44:29,496 - aiogram.dispatcher - INFO - Start polling
+2026-03-11 19:44:29,810 - aiogram.dispatcher - INFO - Run polling for bot @hseinfohelperbot id=8710160874 - 'HSE INFO HELPER'
+2026-03-11 19:44:53,651 - aiogram.event - INFO - Update id=63999939 is handled. Duration 326 ms by bot id=8710160874
+2026-03-11 19:44:57,561 - aiogram.event - INFO - Update id=63999940 is handled. Duration 125 ms by bot id=8710160874
+2026-03-11 19:45:01,014 - __main__ - INFO - Загружено 1 записей из teachers.json
+2026-03-11 19:45:01,162 - aiogram.event - INFO - Update id=63999941 is handled. Duration 150 ms by bot id=8710160874
+2026-03-11 19:45:07,119 - __main__ - INFO - Загружено 1 записей из heads.json
+2026-03-11 19:45:08,169 - aiogram.event - INFO - Update id=63999942 is handled. Duration 1052 ms by bot id=8710160874
+2026-03-11 19:45:09,373 - __main__ - INFO - Загружено 1 записей из paps.json
+2026-03-11 19:45:09,466 - aiogram.event - INFO - Update id=63999943 is handled. Duration 96 ms by bot id=8710160874
+2026-03-11 19:45:11,822 - __main__ - INFO - Загружено 1 записей из admins.json
+2026-03-11 19:45:13,833 - aiogram.event - INFO - Update id=63999944 is handled. Duration 2014 ms by bot id=8710160874
+2026-03-11 19:45:14,427 - aiogram.event - INFO - Update id=63999945 is handled. Duration 504 ms by bot id=8710160874
+2026-03-11 19:45:51,329 - aiogram.event - INFO - Update id=63999946 is handled. Duration 107 ms by bot id=8710160874
+2026-03-11 19:45:56,107 - aiogram.event - INFO - Update id=63999947 is handled. Duration 588 ms by bot id=8710160874
+2026-03-11 19:45:56,889 - __main__ - INFO - Загружено 1 записей из links.json
+2026-03-11 19:45:57,280 - aiogram.event - INFO - Update id=63999948 is handled. Duration 395 ms by bot id=8710160874
+2026-03-11 19:46:06,411 - aiogram.event - INFO - Update id=63999949 is handled. Duration 699 ms by bot id=8710160874
+2026-03-11 19:46:08,884 - aiogram.event - INFO - Update id=63999950 is handled. Duration 944 ms by bot id=8710160874
+2026-03-11 19:46:10,775 - __main__ - INFO - Загружено 1 записей из subjects.json
+2026-03-11 19:46:10,876 - aiogram.event - INFO - Update id=63999951 is handled. Duration 106 ms by bot id=8710160874
+2026-03-11 19:46:13,716 - aiogram.event - INFO - Update id=63999952 is handled. Duration 587 ms by bot id=8710160874
+2026-03-11 19:46:15,009 - aiogram.event - INFO - Update id=63999953 is handled. Duration 188 ms by bot id=8710160874
+2026-03-11 19:46:17,937 - aiogram.event - INFO - Update id=63999954 is handled. Duration 207 ms by bot id=8710160874
+2026-03-11 19:46:22,782 - aiogram.event - INFO - Update id=63999955 is handled. Duration 102 ms by bot id=8710160874
+2026-03-11 19:46:31,192 - aiogram.event - INFO - Update id=63999956 is handled. Duration 495 ms by bot id=8710160874
+2026-03-11 19:47:23,358 - aiogram.event - INFO - Update id=63999957 is handled. Duration 285 ms by bot id=8710160874
+2026-03-11 19:48:22,796 - aiogram.event - INFO - Update id=63999958 is handled. Duration 179 ms by bot id=8710160874
+2026-03-11 19:52:38,289 - aiogram.event - INFO - Update id=63999959 is handled. Duration 128 ms by bot id=8710160874
+2026-03-11 19:53:32,893 - __main__ - INFO - Кеш инициализирован с TTL=300 сек
+2026-03-11 19:53:32,898 - __main__ - INFO - Загружено 1 записей из teachers.json
+2026-03-11 19:53:32,899 - __main__ - INFO - Загружено 1 записей из heads.json
+2026-03-11 19:53:32,900 - __main__ - INFO - Загружено 1 записей из admins.json
+2026-03-11 19:53:32,900 - __main__ - INFO - Загружено 1 записей из paps.json
+2026-03-11 19:53:32,901 - __main__ - INFO - Загружено 1 записей из links.json
+2026-03-11 19:53:32,901 - __main__ - INFO - Загружено 1 записей из subjects.json
+2026-03-11 19:53:32,902 - __main__ - INFO - ✅ Бот запущен!
+2026-03-11 19:53:32,902 - __main__ - INFO - 👑 Администратор: @kuch_kary (ID: 2087846204)
+2026-03-11 19:53:32,902 - __main__ - INFO - 📱 Режим: без регистрации
+2026-03-11 19:53:32,903 - __main__ - INFO - 🤖 Жду сообщения от пользователей...
+2026-03-11 19:53:32,903 - aiogram.dispatcher - INFO - Start polling
+2026-03-11 19:53:33,298 - aiogram.dispatcher - INFO - Run polling for bot @hseinfohelperbot id=8710160874 - 'HSE INFO HELPER'
+2026-03-11 19:53:48,334 - aiogram.event - INFO - Update id=63999960 is handled. Duration 571 ms by bot id=8710160874
+2026-03-11 19:54:00,691 - aiogram.event - INFO - Update id=63999961 is handled. Duration 106 ms by bot id=8710160874
+2026-03-11 19:54:12,252 - aiogram.event - INFO - Update id=63999962 is handled. Duration 111 ms by bot id=8710160874
+2026-03-11 19:55:13,169 - aiogram.event - INFO - Update id=63999963 is handled. Duration 1027 ms by bot id=8710160874
+2026-03-11 19:55:17,298 - __main__ - INFO - Загружено 1 записей из teachers.json
+2026-03-11 19:55:17,299 - __main__ - INFO - Загружено 1 записей из heads.json
+2026-03-11 19:55:17,300 - __main__ - INFO - Загружено 1 записей из admins.json
+2026-03-11 19:55:17,301 - __main__ - INFO - Загружено 1 записей из paps.json
+2026-03-11 19:55:17,301 - __main__ - INFO - Поиск от @Kuch_kary: 'будникова' -> found
+2026-03-11 19:55:18,382 - aiogram.event - INFO - Update id=63999964 is handled. Duration 1180 ms by bot id=8710160874
+2026-03-11 19:55:32,410 - __main__ - INFO - Поиск от @Kuch_kary: 'кто менеджер группы БП25дз05' -> found
+2026-03-11 19:55:34,550 - aiogram.event - INFO - Update id=63999965 is handled. Duration 2405 ms by bot id=8710160874
+2026-03-11 19:55:44,464 - aiogram.event - INFO - Update id=63999966 is handled. Duration 188 ms by bot id=8710160874
+2026-03-11 20:34:32,196 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-03-11 20:34:32,197 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8710160874)
+2026-03-11 20:34:43,527 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8710160874)
+2026-03-11 20:53:32,915 - __main__ - INFO - 🧹 Автоматическая очистка кеша
+2026-03-11 21:19:24,016 - aiogram.event - INFO - Update id=63999967 is handled. Duration 423 ms by bot id=8710160874
+2026-03-11 21:19:26,610 - __main__ - INFO - Загружено 1 записей из teachers.json
+2026-03-11 21:19:27,046 - aiogram.event - INFO - Update id=63999968 is handled. Duration 438 ms by bot id=8710160874
+2026-03-11 21:19:30,046 - aiogram.event - INFO - Update id=63999969 is handled. Duration 550 ms by bot id=8710160874
+2026-03-11 21:19:39,430 - aiogram.event - INFO - Update id=63999970 is handled. Duration 416 ms by bot id=8710160874
+2026-03-11 21:19:42,505 - aiogram.event - INFO - Update id=63999971 is handled. Duration 418 ms by bot id=8710160874
+2026-03-11 21:53:32,922 - __main__ - INFO - 🧹 Автоматическая очистка кеша
+2026-03-11 21:55:18,373 - __main__ - INFO - Загружено 1 записей из teachers.json
+2026-03-11 21:55:18,384 - __main__ - INFO - Загружено 1 записей из heads.json
+2026-03-11 21:55:18,393 - __main__ - INFO - Загружено 1 записей из admins.json
+2026-03-11 21:55:18,402 - __main__ - INFO - Загружено 1 записей из paps.json
+2026-03-11 21:55:18,403 - __main__ - INFO - Поиск от @Kuch_kary: 'что ты умеешь?' -> not_found
+2026-03-11 21:55:19,124 - aiogram.event - INFO - Update id=63999972 is handled. Duration 1113 ms by bot id=8710160874
+2026-03-11 21:55:28,729 - aiogram.event - INFO - Update id=63999973 is handled. Duration 199 ms by bot id=8710160874
+2026-03-11 21:55:31,894 - aiogram.event - INFO - Update id=63999974 is handled. Duration 417 ms by bot id=8710160874
+2026-03-11 21:55:33,808 - aiogram.event - INFO - Update id=63999975 is handled. Duration 104 ms by bot id=8710160874
+2026-03-11 21:55:37,834 - aiogram.event - INFO - Update id=63999976 is handled. Duration 846 ms by bot id=8710160874
+2026-03-11 22:08:06,023 - aiogram.event - INFO - Update id=63999977 is handled. Duration 364 ms by bot id=8710160874
+2026-03-11 22:08:07,575 - __main__ - INFO - Загружено 1 записей из teachers.json
+2026-03-11 22:08:08,190 - aiogram.event - INFO - Update id=63999978 is handled. Duration 617 ms by bot id=8710160874
+2026-03-11 22:08:10,835 - __main__ - INFO - Загружено 1 записей из heads.json
+2026-03-11 22:08:11,657 - aiogram.event - INFO - Update id=63999979 is handled. Duration 824 ms by bot id=8710160874
+2026-03-11 22:08:12,927 - __main__ - INFO - Загружено 1 записей из admins.json
+2026-03-11 22:08:13,042 - aiogram.event - INFO - Update id=63999980 is handled. Duration 117 ms by bot id=8710160874
+2026-03-11 22:08:14,741 - __main__ - INFO - Загружено 1 записей из paps.json
+2026-03-11 22:08:15,155 - aiogram.event - INFO - Update id=63999981 is handled. Duration 416 ms by bot id=8710160874
+2026-03-11 22:08:17,460 - aiogram.event - INFO - Update id=63999982 is handled. Duration 251 ms by bot id=8710160874
+2026-03-11 22:08:24,395 - aiogram.event - INFO - Update id=63999983 is handled. Duration 93 ms by bot id=8710160874
+2026-03-11 22:08:29,587 - aiogram.event - INFO - Update id=63999984 is handled. Duration 481 ms by bot id=8710160874
+2026-03-11 22:08:32,088 - __main__ - INFO - Загружено 1 записей из links.json
+2026-03-11 22:08:32,493 - aiogram.event - INFO - Update id=63999985 is handled. Duration 416 ms by bot id=8710160874
+2026-03-11 22:08:34,455 - aiogram.event - INFO - Update id=63999986 is handled. Duration 145 ms by bot id=8710160874
+2026-03-11 22:08:36,882 - aiogram.event - INFO - Update id=63999987 is handled. Duration 770 ms by bot id=8710160874
+2026-03-11 22:08:36,934 - __main__ - INFO - Загружено 1 записей из subjects.json
+2026-03-11 22:08:37,917 - aiogram.event - INFO - Update id=63999988 is handled. Duration 996 ms by bot id=8710160874
+2026-03-11 22:09:39,831 - aiogram.event - INFO - Update id=63999989 is handled. Duration 138 ms by bot id=8710160874
+2026-03-11 22:09:42,725 - aiogram.event - INFO - Update id=63999990 is handled. Duration 101 ms by bot id=8710160874
+2026-03-11 22:10:27,112 - aiogram.event - INFO - Update id=63999991 is handled. Duration 103 ms by bot id=8710160874
+2026-03-11 22:10:30,400 - aiogram.event - INFO - Update id=63999992 is handled. Duration 594 ms by bot id=8710160874
+2026-03-11 22:15:35,195 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-03-11 22:15:35,196 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8710160874)
+2026-03-11 22:15:46,929 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8710160874)
+2026-03-11 22:34:03,188 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-03-11 22:34:03,188 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8710160874)
+2026-03-11 22:34:14,492 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8710160874)
+2026-03-11 22:53:32,928 - __main__ - INFO - 🧹 Автоматическая очистка кеша
+2026-03-12 01:04:27,303 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-03-12 01:04:27,305 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8710160874)
+2026-03-12 01:04:27,306 - __main__ - INFO - 🧹 Автоматическая очистка кеша
+2026-03-12 01:04:39,640 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8710160874)
+2026-03-12 03:19:07,268 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-03-12 03:19:07,269 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8710160874)
+2026-03-12 03:19:07,270 - __main__ - INFO - 🧹 Автоматическая очистка кеша

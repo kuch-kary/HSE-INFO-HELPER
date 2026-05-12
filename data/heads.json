@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "name": "Даша",
+        "tg_username": "@wwwestram",
+        "group": "БП24ДЗ01"
+    },
+    {
+        "id": 2,
+        "name": "Настя",
+        "tg_username": "@Foxxx_com",
+        "group": "БП24ДЗ02"
+    },
+    {
+        "id": 3,
+        "name": "Света",
+        "tg_username": "@WuZaww",
+        "group": "БП24ДЗ03"
+    },
+    {
+        "id": 4,
+        "name": "Арина",
+        "tg_username": "@aru_fff",
+        "group": "БП24ДЗ04"
+    },
+    {
+        "id": 5,
+        "name": "Ли",
+        "tg_username": "@Li_Newman",
+        "group": "БП24ДЗ04А"
+    },
+    {
+        "id": 6,
+        "name": "Ника",
+        "tg_username": "@nika_bortsova",
+        "group": "БП24ДЗ05"
+    },
+    {
+        "id": 7,
+        "name": "Аня",
+        "tg_username": "@deliivent",
+        "group": "БП24ДЗ06"
+    },
+    {
+        "id": 8,
+        "name": "Егор",
+        "tg_username": "@Egor_CAstruLa",
+        "group": "БП24ДЗ07"
+    },
+    {
+        "id": 9,
+        "name": "Таня",
+        "tg_username": "@SurgeUwU",
+        "group": "БП24ДЗ08"
+    },
+    {
+        "id": 10,
+        "name": "Полина",
+        "tg_username": "@theobruhx",
+        "group": "БП24ДЗ09"
+    },
+    {
+        "id": 11,
+        "name": "Анаит",
+        "tg_username": "@Sunset_Ann",
+        "group": "БП24ДЗ09А"
+    },
+    {
+        "id": 12,
+        "name": "Елизавета",
+        "tg_username": "@tyuleneva_es",
+        "group": "БП24ДЗ10"
+    },
+    {
+        "id": 13,
+        "name": "Вика",
+        "tg_username": "@libolibolubov",
+        "group": "БП25ДЗ01"
+    },
+    {
+        "id": 14,
+        "name": "Ева",
+        "tg_username": "@eva_rstv",
+        "group": "БП25ДЗ02"
+    },
+    {
+        "id": 15,
+        "name": "Лина",
+        "tg_username": "@linastayr",
+        "group": "БП25ДЗ03"
+    },
+    {
+        "id": 16,
+        "name": "Лиза",
+        "tg_username": "@elizzanotfound",
+        "group": "БП25ДЗ04"
+    },
+    {
+        "id": 17,
+        "name": "Ольга",
+        "tg_username": "@onktna",
+        "group": "БП25ДЗ05"
+    },
+    {
+        "id": 18,
+        "name": "Мистика",
+        "tg_username": "@neM1ST1KA",
+        "group": "БП25ДЗ06"
+    },
+    {
+        "id": 19,
+        "name": "Забияка",
+        "tg_username": "@gvaill",
+        "group": "БП25ДЗ07"
+    },
+    {
+        "id": 20,
+        "name": "Евгения",
+        "tg_username": "@vacuuumy",
+        "group": "БП25ДЗ09"
+    },
+    {
+        "id": 21,
+        "name": "Энгри берд",
+        "tg_username": "@voicesofnerat",
+        "group": "БП25ДЗ10"
+    },
+    {
+        "id": 22,
+        "name": "Катя",
+        "tg_username": "@youvegotthemusic",
+        "group": "БП25ДЗ11"
+    },
+    {
+        "id": 23,
+        "name": "Оля",
+        "tg_username": "@sir_k0sichka",
+        "group": "БП25ДЗ12"
+    },
+    {
+        "id": 24,
+        "name": "Ася",
+        "tg_username": "@nassstlest",
+        "group": "БП25ДЗ13"
+    },
+    {
+        "id": 25,
+        "name": "Юки",
+        "tg_username": "@ukinen",
+        "group": "БП25ДЗ14"
+    }
+]

@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "Рина",
+        "tg_username": "@caesarsdead",
+        "groups": [ "БП25ДЗ01" ],
+        "direction": "Коммуникационный дизайн"
+    },
+    {
+        "id": 2,
+        "name": "Леон",
+        "tg_username": "@Morcheim",
+        "groups": [ "БП25ДЗ02" ],
+        "direction": "Коммуникационный дизайн"
+    },
+    {
+        "id": 3,
+        "name": "Влад",
+        "tg_username": "@brat_vlad",
+        "groups": [ "БП25ДЗ03", "БП25ДЗ04" ],
+        "direction": "Коммуникационный дизайн"
+    },
+    {
+        "id": 4,
+        "name": "Катя",
+        "tg_username": "@Kuch_kary",
+        "groups": [ "БП25ДЗ05", "БП25ДЗ06" ],
+        "direction": "Анимация и иллюстрация"
+    },
+    {
+        "id": 5,
+        "name": "Аня",
+        "tg_username": "@deliivent",
+        "groups": [ "БП25ДЗ07", "БП25ДЗ10" ],
+        "direction": "Анимация и иллюстрация / Гейм-дизайн"
+    },
+    {
+        "id": 6,
+        "name": "Ирма",
+        "tg_username": "@prayerbeads",
+        "groups": [ "БП25ДЗ10", "БП25ДЗ14" ],
+        "direction": "Гейм-дизайн / Дизайн среды и интерьера"
+    },
+    {
+        "id": 7,
+        "name": "Тори",
+        "tg_username": "@wwwewqqq",
+        "groups": [ "БП25ДЗ11" ],
+        "direction": "Гейм-дизайн"
+    },
+    {
+        "id": 8,
+        "name": "Полина",
+        "tg_username": "@theobruhx",
+        "groups": [ "БП25ДЗ12", "БП25ДЗ15" ],
+        "direction": "Дизайн и программирование / Дизайн и современное искусство"
+    },
+    {
+        "id": 9,
+        "name": "Лиза",
+        "tg_username": "@elaisazz",
+        "groups": [ "БП24ДЗ13" ],
+        "direction": "Дизайн и продвижение"
+    }
+]
