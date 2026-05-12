@@ -5,7 +5,8 @@ from aiogram.fsm.context import FSMContext
 from keyboards.reply import (
     get_instructions_keyboard, get_freshman_keyboard,
     get_platforms_keyboard, get_docs_keyboard,
-    get_grading_keyboard, get_main_keyboard
+    get_grading_keyboard, get_main_keyboard,
+    get_subjects_keyboard
 )
 from utils.helpers import error_handler, split_long_message
 from instructions_data import Instructions
@@ -86,7 +87,30 @@ def register_handlers(dp: Dispatcher):
             disable_web_page_preview=True
         )
     
-    # ===== НОВЫЙ ОБРАБОТЧИК ДЛЯ ИСТОРИИ ИСКУССТВ =====
+    # ===== ПРЕДМЕТЫ =====
+    
+    @dp.message(lambda message: message.text == "📚 Предметы")
+    @error_handler
+    async def show_subjects_menu(message: types.Message):
+        """Меню предметов"""
+        await message.answer(
+            "📚 ПРЕДМЕТЫ\n\n"
+            "Выберите предмет:",
+            reply_markup=get_subjects_keyboard()
+        )
+    
+    @dp.message(lambda message: message.text == "📐 Проектирование")
+    @error_handler
+    async def show_subjects_design(message: types.Message):
+        """Информация о проектировании"""
+        await message.answer(Instructions.subjects_design())
+    
+    @dp.message(lambda message: message.text == "💻 Технологии")
+    @error_handler
+    async def show_subjects_technology(message: types.Message):
+        """Информация о технологиях"""
+        await message.answer(Instructions.subjects_technology())
+    
     @dp.message(lambda message: message.text == "🎨 История искусств")
     @error_handler
     async def show_art_history_info(message: types.Message):
@@ -94,6 +118,12 @@ def register_handlers(dp: Dispatcher):
         text = Instructions.art_history()
         for part in split_long_message(text):
             await message.answer(part, disable_web_page_preview=True)
+    
+    @dp.message(lambda message: message.text == "📋 Прочее")
+    @error_handler
+    async def show_subjects_other(message: types.Message):
+        """Прочие предметы"""
+        await message.answer(Instructions.subjects_other())
     
     # ===== 2. УЧЕБНЫЕ ПЛАТФОРМЫ =====
     
@@ -217,3 +247,13 @@ def register_handlers(dp: Dispatcher):
             Instructions.scholarship(),
             disable_web_page_preview=True
         )
+    
+    # ===== 6. ОТЧИСЛЕНИЕ =====
+    
+    @dp.message(lambda message: message.text == "⚠️ 6. Отчисление")
+    @error_handler
+    async def show_expulsion_info(message: types.Message):
+        """Информация о причинах отчисления и как его избежать"""
+        text = Instructions.expulsion()
+        for part in split_long_message(text):
+            await message.answer(part, disable_web_page_preview=True)
