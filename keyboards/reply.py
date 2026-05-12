@@ -40,6 +40,7 @@ def get_instructions_keyboard() -> ReplyKeyboardMarkup:
             [KeyboardButton(text="📋 3. Документы и планирование")],
             [KeyboardButton(text="📝 4. Оценивание и экзамены")],
             [KeyboardButton(text="💰 5. Стипендии и возможности")],
+            [KeyboardButton(text="⚠️ 6. Отчисление")],
             [KeyboardButton(text="🔙 Назад")]
         ],
         resize_keyboard=True
@@ -52,7 +53,19 @@ def get_freshman_keyboard() -> ReplyKeyboardMarkup:
             [KeyboardButton(text="🆘 Кто такой ПАП?")],
             [KeyboardButton(text="📧 Корпоративная почта")],
             [KeyboardButton(text="💬 Общение с преподавателями")],
-            [KeyboardButton(text="🎨 История искусств")],  # Новая кнопка
+            [KeyboardButton(text="📚 Предметы")],
+            [KeyboardButton(text="🔙 К списку инструкций")]
+        ],
+        resize_keyboard=True
+    )
+
+def get_subjects_keyboard() -> ReplyKeyboardMarkup:
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [KeyboardButton(text="📐 Проектирование")],
+            [KeyboardButton(text="💻 Технологии")],
+            [KeyboardButton(text="🎨 История искусств")],
+            [KeyboardButton(text="📋 Прочее")],
             [KeyboardButton(text="🔙 К списку инструкций")]
         ],
         resize_keyboard=True
