@@ -88,6 +88,8 @@ def get_docs_keyboard() -> ReplyKeyboardMarkup:
             [KeyboardButton(text="📋 РУП (учебный план)")],
             [KeyboardButton(text="📄 ПУД (программа дисциплин)")],
             [KeyboardButton(text="📘 Майноры")],
+            [KeyboardButton(text="📊 КУД")],
+            [KeyboardButton(text="📋 ИУП")],
             [KeyboardButton(text="🔙 К списку инструкций")]
         ],
         resize_keyboard=True
