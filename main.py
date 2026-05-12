@@ -3,6 +3,7 @@ import logging
 import os
 import sys
 from pathlib import Path
+from threading import Thread
 
 sys.path.append(str(Path(__file__).parent))
 
@@ -10,6 +11,7 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.client.session.aiohttp import AiohttpSession
 from dotenv import load_dotenv
+from flask import Flask
 
 load_dotenv()
 TOKEN = os.getenv('BOT_TOKEN')
@@ -17,6 +19,16 @@ TOKEN = os.getenv('BOT_TOKEN')
 if not TOKEN:
     print("❌ Ошибка: Токен не найден в файле .env")
     sys.exit(1)
+
+# Flask для Render Health Check
+web_app = Flask(__name__)
+
+@web_app.route('/')
+def health_check():
+    return "Bot is running!", 200
+
+def run_web_server():
+    web_app.run(host='0.0.0.0', port=10000)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -66,6 +78,10 @@ async def main():
         logger.info("👋 Бот остановлен")
 
 if __name__ == "__main__":
+    # Запускаем Flask в отдельном потоке
+    web_thread = Thread(target=run_web_server, daemon=True)
+    web_thread.start()
+    
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
