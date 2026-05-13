@@ -3,34 +3,30 @@ import logging
 import os
 import sys
 from pathlib import Path
-from threading import Thread
 
 sys.path.append(str(Path(__file__).parent))
 
 from aiogram import Bot, Dispatcher, types
 from aiogram.fsm.storage.memory import MemoryStorage
-from aiogram.client.session.aiohttp import AiohttpSession
 from aiogram.client.default import DefaultBotProperties
+from aiogram.types import Update
 from dotenv import load_dotenv
-from flask import Flask
+from flask import Flask, request, jsonify
 
 load_dotenv()
 TOKEN = os.getenv('BOT_TOKEN')
+WEBHOOK_URL = os.getenv('WEBHOOK_URL')  # Добавьте это в .env!
 
 if not TOKEN:
     print("❌ Ошибка: Токен не найден в файле .env")
     sys.exit(1)
 
-# Flask для Render Health Check
-web_app = Flask(__name__)
+if not WEBHOOK_URL:
+    print("❌ Ошибка: WEBHOOK_URL не найден в файле .env")
+    print("💡 Добавьте в .env: WEBHOOK_URL=https://ваш-сервис.onrender.com")
+    sys.exit(1)
 
-@web_app.route('/')
-def health_check():
-    return "Bot is running!", 200
-
-def run_web_server():
-    web_app.run(host='0.0.0.0', port=10000)
-
+# Настройка логов
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -41,28 +37,32 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Создаём сессию с увеличенным таймаутом
-session = AiohttpSession()
+# Создаём бота и диспетчер
 bot = Bot(
-    token=TOKEN, 
-    session=session,
+    token=TOKEN,
     default=DefaultBotProperties(parse_mode=None)
 )
 storage = MemoryStorage()
 dp = Dispatcher(storage=storage)
 
+# Импортируем все обработчики
 from handlers import register_all_handlers
 from keyboards.reply import get_main_keyboard
 from utils.cache import cache
 
 register_all_handlers(dp)
 
+# Предзагружаем кеш
 try:
     cache.preload_all()
     logger.info("✅ Все данные предзагружены в кеш")
 except Exception as e:
     logger.error(f"❌ Ошибка при предзагрузке данных: {e}")
 
+# Создаём Flask приложение
+web_app = Flask(__name__)
+
+# Обработчик неизвестных команд
 @dp.message()
 async def unknown_message(message: types.Message):
     logger.info(f"Неизвестная команда от {message.from_user.id}: '{message.text}'")
@@ -72,32 +72,62 @@ async def unknown_message(message: types.Message):
         reply_markup=get_main_keyboard()
     )
 
-async def main():
-    try:
-        logger.info("✅ Бот запущен!")
-        logger.info("🤖 Жду сообщения от пользователей...")
-        
-        # Удаляем вебхук и запускаем polling с увеличенным таймаутом
-        await bot.delete_webhook(drop_pending_updates=True)
-        await dp.start_polling(
-            bot,
-            polling_timeout=60,
-            handle_as_tasks=True
-        )
-    except Exception as e:
-        logger.error(f"❌ Ошибка при работе бота: {e}", exc_info=True)
-    finally:
-        await bot.session.close()
-        logger.info("👋 Бот остановлен")
-
-if __name__ == "__main__":
-    # Запускаем Flask в отдельном потоке
-    web_thread = Thread(target=run_web_server, daemon=True)
-    web_thread.start()
+# Flask маршрут для вебхука
+@web_app.route("/", methods=["POST", "GET"])
+async def webhook():
+    if request.method == "GET":
+        return "Bot is running!", 200
     
     try:
-        asyncio.run(main())
-    except KeyboardInterrupt:
-        logger.info("👋 Бот остановлен пользователем (Ctrl+C)")
+        # Получаем обновление от Telegram
+        update_data = request.get_json()
+        update = Update.model_validate(update_data)
+        
+        # Обрабатываем обновление
+        await dp.feed_update(bot, update)
+        return jsonify({"status": "ok"}), 200
     except Exception as e:
-        logger.error(f"❌ Критическая ошибка: {e}", exc_info=True)
+        logger.error(f"❌ Ошибка в вебхуке: {e}", exc_info=True)
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+# Flask маршрут для проверки здоровья
+@web_app.route("/health")
+def health_check():
+    return jsonify({"status": "healthy"}), 200
+
+# Flask маршрут для установки вебхука
+@web_app.route("/set_webhook", methods=["GET"])
+async def set_webhook():
+    try:
+        # Устанавливаем вебхук на наш сервер
+        webhook_url = f"{WEBHOOK_URL}/"
+        await bot.set_webhook(
+            webhook_url,
+            drop_pending_updates=True,
+            allowed_updates=["message", "callback_query"]  # Разрешаем только нужные типы
+        )
+        logger.info(f"✅ Вебхук установлен: {webhook_url}")
+        return jsonify({"status": "ok", "webhook_url": webhook_url}), 200
+    except Exception as e:
+        logger.error(f"❌ Ошибка при установке вебхука: {e}")
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+# Flask маршрут для удаления вебхука
+@web_app.route("/delete_webhook", methods=["GET"])
+async def delete_webhook():
+    try:
+        await bot.delete_webhook(drop_pending_updates=True)
+        logger.info("✅ Вебхук удален")
+        return jsonify({"status": "ok"}), 200
+    except Exception as e:
+        logger.error(f"❌ Ошибка при удалении вебхука: {e}")
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+# Запуск Flask приложения
+def run_flask():
+    port = int(os.environ.get("PORT", 10000))
+    web_app.run(host="0.0.0.0", port=port)
+
+if __name__ == "__main__":
+    # Запускаем Flask сервер
+    run_flask()
