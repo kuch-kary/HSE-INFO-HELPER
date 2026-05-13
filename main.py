@@ -2,6 +2,7 @@ import asyncio
 import logging
 import os
 import sys
+import socket
 from pathlib import Path
 from threading import Thread
 
@@ -19,6 +20,14 @@ TOKEN = os.getenv('BOT_TOKEN')
 if not TOKEN:
     print("❌ Ошибка: Токен не найден в файле .env")
     sys.exit(1)
+
+# Проверка: не запущен ли уже бот (защита от двойного запуска)
+LOCK_SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+try:
+    LOCK_SOCKET.bind(("127.0.0.1", 12345))
+except socket.error:
+    print("❌ Бот уже запущен! Завершаем второй экземпляр...")
+    sys.exit(0)
 
 # Flask для Render Health Check
 web_app = Flask(__name__)
@@ -74,6 +83,7 @@ async def main():
     except Exception as e:
         logger.error(f"❌ Ошибка при работе бота: {e}", exc_info=True)
     finally:
+        LOCK_SOCKET.close()
         await bot.session.close()
         logger.info("👋 Бот остановлен")
 
