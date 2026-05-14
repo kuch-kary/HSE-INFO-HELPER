@@ -22,7 +22,7 @@ if not BOT_TOKEN:
 
 # Настройка логов
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
@@ -51,9 +51,10 @@ try:
 except Exception as e:
     logger.error(f"❌ Ошибка при предзагрузке данных: {e}")
 
-# Обработчик неизвестных команд
+# Обработчик неизвестных команд с простым ответом
 @dp.message()
 async def unknown_message(message: types.Message):
+    logger.info(f"Неизвестная команда: {message.text}")
     await message.answer(
         "❌ Я не понимаю эту команду.\n"
         "Пожалуйста, используйте кнопки меню или /start",
@@ -75,13 +76,22 @@ def webhook():
         update_data = request.get_json()
         
         if not update_data:
+            logger.warning("Нет данных в запросе")
             return jsonify({"status": "error", "message": "No data"}), 400
+        
+        logger.info(f"Получен вебхук: {update_data.get('message', {}).get('text', 'no text')}")
         
         # Создаем объект Update
         update = Update.model_validate(update_data)
         
         # Запускаем обработку в глобальном event loop
-        asyncio.run_coroutine_threadsafe(dp.feed_update(bot, update), loop)
+        future = asyncio.run_coroutine_threadsafe(dp.feed_update(bot, update), loop)
+        
+        # Ждем немного, чтобы обработать
+        try:
+            future.result(timeout=10)
+        except TimeoutError:
+            logger.warning("Обработка обновления заняла слишком много времени")
         
         return jsonify({"status": "ok"}), 200
         
@@ -98,14 +108,12 @@ def set_webhook():
         webhook_url = f"https://{request.host}/webhook"
         
         url = f"https://api.telegram.org/bot{BOT_TOKEN}/setWebhook"
-        response = requests.post(url, json={"url": webhook_url})
+        response = requests.post(url, json={"url": webhook_url, "drop_pending_updates": True})
         
         if response.status_code == 200:
             result = response.json()
-            if result.get('ok'):
-                return jsonify({"status": "ok", "webhook_url": webhook_url, "result": result})
-            else:
-                return jsonify({"status": "error", "message": result.get('description')}), 500
+            logger.info(f"Вебхук установлен: {webhook_url}, результат: {result}")
+            return jsonify({"status": "ok", "webhook_url": webhook_url, "result": result})
         else:
             return jsonify({"status": "error", "message": f"HTTP {response.status_code}"}), 500
             
@@ -121,6 +129,19 @@ def delete_webhook():
     try:
         url = f"https://api.telegram.org/bot{BOT_TOKEN}/deleteWebhook"
         response = requests.post(url)
+        logger.info(f"Вебхук удален: {response.json()}")
+        return jsonify(response.json())
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+@app.route('/check_webhook', methods=['GET'])
+def check_webhook():
+    """Проверка статуса вебхука"""
+    import requests
+    
+    try:
+        url = f"https://api.telegram.org/bot{BOT_TOKEN}/getWebhookInfo"
+        response = requests.get(url)
         return jsonify(response.json())
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
@@ -138,4 +159,4 @@ if __name__ == "__main__":
     
     # Запускаем Flask
     port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=port, debug=False)
