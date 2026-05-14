@@ -8,11 +8,12 @@ sys.path.append(str(Path(__file__).parent))
 from aiogram import Bot, Dispatcher, types
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.client.default import DefaultBotProperties
+from aiogram.types import Update
 from flask import Flask, request, jsonify
-import json
-import requests
+import asyncio
+import threading
 
-# Ваш токен (получаем из переменных окружения Render)
+# Ваш токен
 BOT_TOKEN = os.getenv('BOT_TOKEN')
 
 if not BOT_TOKEN:
@@ -26,8 +27,12 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Глобальный event loop
+loop = asyncio.new_event_loop()
+asyncio.set_event_loop(loop)
+
 # Создаём бота и диспетчер
-bot = Bot(token=BOT_TOKEN)
+bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=None))
 storage = MemoryStorage()
 dp = Dispatcher(storage=storage)
 
@@ -46,6 +51,15 @@ try:
 except Exception as e:
     logger.error(f"❌ Ошибка при предзагрузке данных: {e}")
 
+# Обработчик неизвестных команд
+@dp.message()
+async def unknown_message(message: types.Message):
+    await message.answer(
+        "❌ Я не понимаю эту команду.\n"
+        "Пожалуйста, используйте кнопки меню или /start",
+        reply_markup=get_main_keyboard()
+    )
+
 # Создаём Flask приложение
 app = Flask(__name__)
 
@@ -55,27 +69,19 @@ def index():
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    """Обработка входящих запросов от Telegram (синхронная версия)"""
+    """Обработка входящих запросов от Telegram"""
     try:
-        # Получаем данные от Telegram
+        # Получаем данные
         update_data = request.get_json()
         
         if not update_data:
             return jsonify({"status": "error", "message": "No data"}), 400
         
-        # Импортируем asyncio для запуска асинхронного обработчика
-        import asyncio
+        # Создаем объект Update
+        update = Update.model_validate(update_data)
         
-        # Создаем новый event loop для этого запроса
-        loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(loop)
-        
-        try:
-            # Создаем объект Update и передаем его в диспетчер
-            update = types.Update.model_validate(update_data)
-            loop.run_until_complete(dp.feed_update(bot, update))
-        finally:
-            loop.close()
+        # Запускаем обработку в глобальном event loop
+        asyncio.run_coroutine_threadsafe(dp.feed_update(bot, update), loop)
         
         return jsonify({"status": "ok"}), 200
         
@@ -85,12 +91,12 @@ def webhook():
 
 @app.route('/set_webhook', methods=['GET'])
 def set_webhook():
-    """Установка вебхука (один раз в браузере)"""
+    """Установка вебхука"""
+    import requests
+    
     try:
-        # Получаем URL сервера
         webhook_url = f"https://{request.host}/webhook"
         
-        # Отправляем запрос к Telegram API
         url = f"https://api.telegram.org/bot{BOT_TOKEN}/setWebhook"
         response = requests.post(url, json={"url": webhook_url})
         
@@ -110,6 +116,8 @@ def set_webhook():
 @app.route('/delete_webhook', methods=['GET'])
 def delete_webhook():
     """Удаление вебхука"""
+    import requests
+    
     try:
         url = f"https://api.telegram.org/bot{BOT_TOKEN}/deleteWebhook"
         response = requests.post(url)
@@ -117,7 +125,17 @@ def delete_webhook():
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
 
+# Функция для запуска event loop в отдельном потоке
+def run_loop():
+    asyncio.set_event_loop(loop)
+    loop.run_forever()
+
 # Запуск
 if __name__ == "__main__":
+    # Запускаем event loop в отдельном потоке
+    thread = threading.Thread(target=run_loop, daemon=True)
+    thread.start()
+    
+    # Запускаем Flask
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
